@@ -14,3 +14,4 @@ category: lessons
 hallo here
 
 <iframe width="600" height="450" frameborder="0" allowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/30615851?color=ffffff">
+</iframe>
