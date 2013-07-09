@@ -19,6 +19,10 @@ Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
 ## blubber
 
+<div id="video2" class="classactive">
+<iframe width="600" height="450" frameborder="0" allowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/30615851?color=ffffff">
+<p>
+</div>
 
 
 ### What is Jekyll?
