@@ -20,10 +20,6 @@ Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 ## blubbaaaa
 
 
-<iframe width="600" height="450" frameborder="0" allowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/30615851?color=ffffff">
-
-
-
 ### What is Jekyll?
 
 Jekyll is a parsing engine bundled as a ruby gem used to build static websites from
