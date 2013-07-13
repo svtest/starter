@@ -1,0 +1,41 @@
+---
+layout: page
+title: Posts
+header: Posts By Category
+group: navigation
+---
+{% include JB/setup %}
+
+
+{% assign categories_list = site.categories %}
+
+
+{% comment %}
+ {% include JB/categories_list %}
+{% endcomment %}  
+
+
+
+
+<p> list posts: </p>
+
+<dl class="posts">
+  {% for post in site.posts %}
+   <dt> <span>{{ post.date | date_to_string }}</span> </dt> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+  {% endfor %}
+</dl>
+
+</br>
+</br>
+
+
+<p> list posts like this: </p>
+
+
+{% for category in site.categories %} 
+  <h2 id="{{ category[0] }}-ref"> {{ category[0] | join: "/" }}</h2>
+    {% assign pages_list = category[1] %}
+   <ul class="unstyled">
+   {% include JB/pages_list %}
+   </ul>
+{% endfor %}

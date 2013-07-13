@@ -1,3 +1,9 @@
+<!-- page:
+
+{% assign pageblubber = page %}
+{{ pageblubber }} -->
+
+
 {% if site.safe and site.JB.analytics.provider and page.JB.analytics != false %}
 
 {% case site.JB.analytics.provider %}

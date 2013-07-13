@@ -1,0 +1,16 @@
+---
+published: true
+layout: post
+category: firstpost
+JB :
+  analytics : false
+---
+
+{% include JB/setup %}
+
+
+this is post nr 1
+
+
+<iframe width="600" height="450" frameborder="0" allowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/30615851?color=ffffff">
+</iframe>
