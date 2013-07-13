@@ -9,4 +9,4 @@ tagline: Supporting tagline
 
 {% include JB/setup %}
 
-thats the index page!!!
+<p>thats the index page!!!</p>
