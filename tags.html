@@ -6,16 +6,37 @@ group: navigation
 ---
 {% include JB/setup %}
 
+
+{% comment %}
 <ul class="tag_box inline">
   {% assign tags_list = site.tags %}  
   {% include JB/tags_list %}
 </ul>
+{% endcomment %}
+
+
+
+<div class="hero-unit imgH1">
+      </div>
 
 
 {% for tag in site.tags %} 
-  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-  <ul>
+  <h4 id="{{ tag[0] }}-ref">{{ tag[0] }}:</h4>
+  <ul class="unstyled">
     {% assign pages_list = tag[1] %}  
     {% include JB/pages_list %}
+    <br />
   </ul>
 {% endfor %}
+
+
+
+{% comment %}
+{% for post in site.posts %}
+  <h3>Tags for: {{post.title}}</h3>  
+  <ul>
+    {% assign tags_list = post.tags %}  
+    {% include JB/tags_list %}
+  </ul>
+{% endfor %}
+{% endcomment %}

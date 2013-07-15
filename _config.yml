@@ -8,10 +8,10 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : dev_supervision
+title : Dev_SuperVision
 tagline: 
 author :
-  name : Name Lastname
+  name : Super Vision
   email : blah@email.test
   github : username
   twitter : username
@@ -70,7 +70,8 @@ JB :
   # Some JB helpers refer to these paths; change them here if needed.
   #
   archive_path: /archive.html
-  categories_path : /categories.html
+  categories_path : /posts.html
+  # categories.html changed to posts.html
   tags_path : /tags.html
   atom_path : /atom.xml
   rss_path : /rss.xml

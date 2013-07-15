@@ -1,3 +1,6 @@
+<div class="hero-unit imgH4">
+      </div>
+
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
 </div>
@@ -10,9 +13,9 @@
     </div>
 
 
-    <div class="content">
+    <!-- <div class="content"> -->
       {{ content }}
-    </div>
+    <!-- </div> -->
 
 
   {% unless page.categories == empty %}
@@ -20,6 +23,7 @@
       <!-- <li><i class="icon-folder-open"></i></li> -->
       {% assign categories_list = page.categories %}
       
+
       {% comment %}
       {% include JB/categories_list %}
       {% endcomment %}
@@ -29,6 +33,7 @@
   {% endunless %}  
 
   {% unless page.tags == empty %}
+  <h4> Tags: </h4>
     <dl class="tag_box inline">
       <i class="icon-tags"></i>
       {% assign tags_list = page.tags %}
@@ -40,13 +45,15 @@
 
     <div class="pagination">
       <ul>
+
+      <!-- <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li> -->
+      <li><a href="/posts.html">All Posts</a></li>
+
       {% if page.previous %}
         <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">Previous</a></li>
       {% else %}
         <li class="prev disabled"><a>Previous</a></li>
       {% endif %}
-
-        <!-- <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li> -->
 
       {% if page.next %}
         <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next</a></li>

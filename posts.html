@@ -16,21 +16,20 @@ group: navigation
 
 
 
-
-<p> list posts: </p>
-
-<dl class="posts">
-  {% for post in site.posts %}
-   <dt> <span>{{ post.date | date_to_string }}</span> </dt> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-  {% endfor %}
-</dl>
-
-</br>
-</br>
+<div class="hero-unit imgH4">
+      </div>
 
 
-<p> list posts like this: </p>
+ {% for post in site.posts %}
+   <h4>{{ post.date | date_to_string }}:</h4> <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+   <p>&nbsp;</p>
+   {{post.content}}
+ {% endfor %}
 
+
+
+
+{% comment %}
 
 {% for category in site.categories %} 
   <h2 id="{{ category[0] }}-ref"> {{ category[0] | join: "/" }}</h2>
@@ -39,3 +38,6 @@ group: navigation
    {% include JB/pages_list %}
    </ul>
 {% endfor %}
+<dt> </dt>
+
+{% endcomment %} 
