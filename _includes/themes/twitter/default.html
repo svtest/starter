@@ -72,9 +72,14 @@
           <a class="brand" href="{{ HOME_PATH }}"> &nbsp; Home</a>
           <ul class="nav">
 
-            {% assign pages_list = site.pages %}
+
+            <!-- {% assign pages_list = site.pages %} -->
+            <!-- {% assign group = 'navigation' %} -->
+            <!-- {% include JB/pages_list %} -->
+
+            {% assign pages_list_list = site.pages %}
             {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
+            {% include JB/pages_list_list %}
 
 <!--############################################################################################################-->
 <!-- pages_list adds all html sites as links to the navbar, see: /_includes/JB/pages_list

@@ -1,0 +1,23 @@
+
+{% for node in pages_list_list %}
+  {% if group == node.group and node.category != null %}
+    <li class="dropdown">
+      <a class= "dropdown-toggle" href="#"> {{node.title}} - dropdown <b class= "caret"></b>
+        <!-- toggle with data-toggle or directly with javascript -->
+        <script>
+          $('.dropdown-toggle').dropdown()
+        </script>
+      </a>
+
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        {% for subnode in pages_list_list %}
+          {% if node.category == subnode.category %}
+            <li><a href="{{ BASE_PATH }}{{subnode.url}}">{{subnode.title}}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+  {% endif %}
+{% endfor %}
+{% assign pages_list = nil %}
+{% assign group = nil %}
