@@ -53,7 +53,6 @@
 
 
   <!--test for navbar fixed on top-->
-
   <!-- <div class="navbar navbar data-spy="affix" data-offset-top="200"">  -->
   <!-- <div class= "navbar navbar stay" id= "mastnav"> -->
       <script>
@@ -62,104 +61,89 @@
    // });  
    // </script>
 
-          <!-- for navbar normal change to: 1.st container-narrow, 2. navbar navbar -->
-          <div class= "navbar navbar-fixed-top" id= "mastnav"> <!--  >>css body with padding-top:60px -->
+
+    <!-- for navbar normal change to: 1.st container-narrow, 2. navbar navbar -->
+          <div class= "navbar navbar-fixed-top" id= "mastnav"> <!-- css body with padding-top:60px, ok with mobiles?-->
             <div class="container-narrow">
               <div class="navbar-inner">
 
-           <!-- class brand?-->
+          <!-- class brand?-->
           <!-- <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a> -->
-          <a class="brand" href="{{ HOME_PATH }}"> &nbsp; &nbsp; Home</a>
-
+          <a class="brand" href="{{ HOME_PATH }}"> &nbsp; Home</a>
           <ul class="nav">
 
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
 
-<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<!--############################################################################################################-->
+<!-- pages_list adds all html sites as links to the navbar, see: /_includes/JB/pages_list
+Posts (a href posts.html) shows all the published entries (with every single post)
+how is it possible to add a dropdown menu to the 'Posts' element in the navbar to show seperated links to the posts (with posts_list)? -->
+
+<!-- as a test, posts_list is now added to an additional dropdown-menu, see further starting at ~line 118 -->
+<!--############################################################################################################-->
+
+
+
 <!--test to add dropdown menu to one element of pages_list ?? -->           
-
-
 <!-- pages_list | remove: 'posts.html' -->
- 
-<!-- {% assign page_title = page.title %}
+ <!-- {% assign page_title = page.title %}
         {% if page_title == 'Posts' %}
         {{page_title}}
-      {% endif %}  -->  
+        {% endif %}  -->  
 
-
-<!--     <ul>
+<!-- <ul>
   {% for post in site.posts %}
     <li>
       {{ post.title }}</a>
     </li>
   {% endfor %}
-    </ul> -->
-
+      </ul> -->
 
 <!-- {% for posts in site.pages %} -->
 <!-- {% endfor %} -->
 
 <!-- {% assign name = 'Posts' %}
 {% for t in pages_list %}{% if t == name %}
-  <p>Freestyle!</p>
+  <p>Posts in pages_list!</p>
 {% endif %}{% endfor %} -->
-
 
             
 <!--include dropdown if page title == ??-->
-<!--             {% if page.title == 'Posts' %} 
-HELLO POSTS
-{% endif %} -->
+<!-- {% if page.title == 'Posts' %} HELLO POSTS {% endif %} -->
 
 
-        <!-- dropdown -->
+            <!-- dropdown -->
             <li class="dropdown">
               <!-- <a class= "dropdown-toggle" data-toggle="dropdown" href="#">
-              Drop <b class= "caret"></b> -->
+              Posts - dropdown <b class= "caret"></b> -->
 
               <a class= "dropdown-toggle" href="#"> Posts - dropdown <b class= "caret"></b>
-<!-- toggle with data-toggle or directly with javascript -->
-<script>
-$('.dropdown-toggle').dropdown()
-</script>       
+              <!-- toggle with data-toggle or directly with javascript -->
+              <script>
+              $('.dropdown-toggle').dropdown()
+              </script>       
               </a>
+              
               <!-- <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">   -->
               
               <!-- <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel"> -->
               <!-- <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"> -->
 
-
                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-            <!--get list of subpages here??-->
-            <!-- references modified pages_list file / -> posts_list   -->
+              <!--get list of subpages here-->
+              <!-- references modified pages_list file / -> posts_list   -->
+              {% assign posts_list = site.posts %}   
+              {% include JB/posts_list %}
 
-            {% assign posts_list = site.posts %}   
-            {% include JB/posts_list %}
-
-<!--               <li><a href="#">subpage 1</a></li>
+              <!-- or add fixed links -->
+              <!-- <li><a href="#">subpage 1</a></li>
               <li><a tabindex="-1" href="#">subpage 2</a></li>
-              <li><a tabindex="-1" href="#">subpage 3</a></li>
               <li class="divider"></li>
-              <li><a tabindex="-1" href="#">subpage 4 </a></li> -->
+              <li><a tabindex="-1" href="#">subpage 3 </a></li> -->
               </ul>
             </li>
-
-              <!--examp as above-->
-<!--          <li class= "dropdown">
-              <a class= "dropdown-toggle" data-toggle="dropdown" href="#">
-                Drop <b class= "caret"></b>
-              </a>
-
-              <ul class="dropdown-menu">
-                  <li><a href="#">subpage 1</a></li>
-                  <li><a href="#">subpage 2</a></li>
-                  <li><a href="#">subpage 3</a></li>
-                  <li><a href="#">subpage 4</a></li>
-              </ul>
-            </li> -->
-      
 
             </ul>
         </div>
@@ -169,25 +153,22 @@ $('.dropdown-toggle').dropdown()
 
 
 <!-- navbar on the side? or make a sublist on the sidebar? -->
-
     <div class="row-fluid">
-      
       <div class="well sidebar-nav sidebar-nav-fixed">
           <ul class="nav">
+            <div class= "indent-text2">
             <h6>Pages:</h6>
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
             
             <p>&nbsp;</p><h6>Posts:</h6>
-
-
             <!-- references modified pages_list file / -> posts_list   -->
 
             {% assign posts_list = site.posts %}   
             {% include JB/posts_list %}
 
-<!--             {% for post in site.posts %}
+            <!-- {% for post in site.posts %}
             <div class='newLink'>
               <li class="active">
             <span style="display:block; height: 20px;">
@@ -196,12 +177,9 @@ $('.dropdown-toggle').dropdown()
             </div>
             {% endfor %} -->
 
+          </div>
           </ul>
       </div>
-
-
-
-<!-- to do: format of text, images, videos? -->
 
     <div class="container-narrow">
       
@@ -211,7 +189,7 @@ $('.dropdown-toggle').dropdown()
       <hr> 
       <footer>
 
-      <!--indent-text-->
+      <!--indent-text, layout for text, images, etc. -->
       <div class="indent-text">
         <p>the impressum
         &copy;{{ site.time | date: '%Y' }} {{ site.author.name }}
@@ -220,8 +198,6 @@ $('.dropdown-toggle').dropdown()
 
       </footer> 
     </div>
-
-
 
   </dif>
 
@@ -245,7 +221,7 @@ $('.dropdown-toggle').dropdown()
             <span class="icon-bar"></span>
           </a>
 
-          <a class="brand" href="/">Really Cool Software, LLC</a>
+          <a class="brand" href="/">Hello</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="/index.html">Home</a></li>
@@ -265,18 +241,14 @@ $('.dropdown-toggle').dropdown()
         <div class="span2">
           <img id="logo" src="/images/logo.png">
         </div>
-
         <div class="span10 main-content">
-
         </div>
       </div>
     </div>
-
   </div> -->
 
 
 <!-- examples dropdown, navbar, etc. -->
-
 <!--   <div class="container">
         <h3>dropdownmenu</h3>
         
@@ -299,9 +271,7 @@ $('.dropdown-toggle').dropdown()
                 </ul>
                 
               </li>
-              
-            </ul>
-                 
+            </ul>    
         </div>
   </div>
  -->
@@ -338,8 +308,6 @@ $('.dropdown-toggle').dropdown()
       <li class="active"><a href="#">Home</a></li>
       <li><a href="#">Library</a></li>
     </ul> -->
-
-
 
   </body>
 </html>
