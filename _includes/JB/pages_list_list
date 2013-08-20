@@ -1,8 +1,6 @@
-
-{% for node in pages_list %}
-  {% if group == node.group and node.category != null %}
+{% for category in site.JB.navi_categories %}
     <li class="dropdown">
-      <a class= "dropdown-toggle" href="#"> {{node.title}} - dropdown <b class= "caret"></b>
+      <a class= "dropdown-toggle" href="#"> {{category}} - dropdown <b class= "caret"></b>
         <!-- toggle with data-toggle or directly with javascript -->
         <script>
           $('.dropdown-toggle').dropdown()
@@ -11,13 +9,12 @@
 
       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
         {% for subnode in pages_list %}
-          {% if node.category == subnode.category %}
+          {% if category == subnode.category %}
             <li><a href="{{ BASE_PATH }}{{subnode.url}}">{{subnode.title}}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
     </li>
-  {% endif %}
 {% endfor %}
 {% assign pages_list = nil %}
 {% assign group = nil %}
