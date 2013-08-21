@@ -130,6 +130,24 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
 
+  # pages with subcategories in navbar
   navi_categories:
-    - "A"
-    - "B"
+    - "Supervision"
+    - "Wiener Modell"
+    - "wo noch"
+    - "Aktuelles"
+
+  # pages in navbar ( no subcategories)
+  navi_pages:
+    - "About"
+    - "Impressum"
+
+  # pages on the sidebar
+  navi_pages_sidebar:
+    - "Supervision"
+    - "Wiener Modell"
+    - "wo noch"
+    - "Aktuelles"
+    - "Tags"
+    
+

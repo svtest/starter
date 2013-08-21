@@ -1,16 +1,12 @@
 ---
-layout: page_fw
-title : Page2
-header : Post Archive
-group: navigation
+layout: page
+title : Literatur
+header : Literatur
+category: Aktuelles
 ---
 
-
- 
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
 </div>
 
-
-<p> page2: fw to page_fw fw to page <p>
-
+Text - Literatur xxxxxxxxxxxx

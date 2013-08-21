@@ -288,11 +288,11 @@ a:focus {
 .sidebar-nav-fixed {
      margin-left: 5px;
      position:fixed;
-     width:8.5%;
+     width:11.5%;
  }
 
  /*@media (max-width: 767px) {*/
- @media (max-width: 973px) {
+ @media (max-width: 1018px) {
      .sidebar-nav-fixed {
       display: none;
      }

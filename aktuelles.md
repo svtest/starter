@@ -1,15 +1,15 @@
 ---
 layout: page
-title : Page1
-header : Post Archive
+title : Aktuelles
+header : Aktuelles
 group: navigation
+category: Aktuelles
 ---
-
-
 
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
 </div>
 
 
-<p> page1 fw to page </p>
+Text - Aktuelles xxxxxxxxxxxxxxxxx
+

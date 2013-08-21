@@ -1,6 +1,7 @@
 {% for category in site.JB.navi_categories %}
     <li class="dropdown">
-      <a class= "dropdown-toggle" href="#"> {{category}} - dropdown <b class= "caret"></b>
+    {%comment%} toggle disabled enables clickable link, additional js function to have toggle and click ? {% endcomment %}
+      <a class= "dropdown-toggle disabled" href="/{{category | downcase}}.html"> {{category}} <b class= "caret"></b>
         <!-- toggle with data-toggle or directly with javascript -->
         <script>
           $('.dropdown-toggle').dropdown()
@@ -15,6 +16,7 @@
         {% endfor %}
       </ul>
     </li>
+
 {% endfor %}
 {% assign pages_list = nil %}
 {% assign group = nil %}
