@@ -13,7 +13,6 @@ is there a problem if BASE PATH is not used, if it ist used links won't function
 why does comparison not work? does it have the same format?
 {% endcomment %}
 
-
       	
       	<li class="active"><li><a href="/{{pages | downcase}}.html">{{pages}}</a></li>
       	{% else %}
@@ -28,9 +27,3 @@ why does comparison not work? does it have the same format?
 			{% endcomment %}    
 
 {% endfor %}
-
-
-
-
-
-

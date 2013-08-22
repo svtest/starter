@@ -70,7 +70,7 @@
 
           <!-- class brand?-->
           <!-- <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a> -->
-          <a class="brand" href="{{ HOME_PATH }}"> &nbsp; Home</a>
+          <!-- <a class="brand" href="{{ HOME_PATH }}"> &nbsp; Home</a> -->
           <ul class="nav">
 
 
@@ -111,11 +111,11 @@
             {% include JB/pages_list_pages_sidebar_html %}
 
             
-            <p>&nbsp;</p><h6>Posts:</h6>
+ <!-- <p>&nbsp;</p><h6>Posts:</h6> -->
             <!-- references modified pages_list file / -> posts_list   -->
 
-            {% assign posts_list = site.posts %}   
-            {% include JB/posts_list %}
+<!--  {% assign posts_list = site.posts %}   
+      {% include JB/posts_list %} -->
 
             <!-- {% for post in site.posts %}
             <div class='newLink'>
@@ -131,7 +131,39 @@
       </div>
 
     <div class="container-narrow">
-      
+
+<!-- change image for different pages -->
+{% case page.title %}
+{% when 'Supervision' %}  {% assign sel_img = 'galaxy' %}
+
+{% when 'Wiener Modell' %}  {% assign sel_img = 'cover' %}
+  {% when 'Wo' %}  {% assign sel_img = 'cover' %}
+  {% when 'Wie' %}  {% assign sel_img = 'cover' %}
+  {% when 'Wer' %}  {% assign sel_img = 'cover' %}
+  {% when 'Organisatorisches' %}  {% assign sel_img = 'cover' %}
+  {% when 'Für wen' %}  {% assign sel_img = 'cover' %}
+  {% when 'Fakten' %}  {% assign sel_img = 'cover' %}
+
+{% when 'wo noch' %}  {% assign sel_img = 'seesaw' %}
+
+{% when 'Aktuelles' %}  {% assign sel_img = 'pachinko' %}
+  {% when 'Blog' %}  {% assign sel_img = 'pachinko' %}
+  {% when 'Literatur' %}  {% assign sel_img = 'pachinko' %}
+  {% when 'Veranstaltungen' %}  {% assign sel_img = 'pachinko' %}
+
+{% when 'About' %}  {% assign sel_img = 'panda' %}  
+
+{% when 'Impressum' %}  {% assign sel_img = 'train' %} 
+
+{% else %} {% assign sel_img = 'pachinko' %}
+{% endcase %} 
+
+
+
+
+     <div class="hero-unit" style= "background-image:url('/images/{{sel_img}}.jpg'); ">
+     </div>
+
       <!-- <div class="content"> -->
         {{ content }}
       <!-- </div> -->

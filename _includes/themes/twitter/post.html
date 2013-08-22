@@ -1,7 +1,7 @@
 
 <!--set image for post entries her-->
-<div class="hero-unit imgH4">
-      </div>
+<!-- <div class="hero-unit imgH4">
+      </div> -->
 
 
 <!--indent-text-->
@@ -9,7 +9,8 @@
 
 
 <div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+  <h1> Posts </h1>
+  <!-- <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1> -->
 </div>
 
 
@@ -24,9 +25,9 @@
       {{ content }}
     <!-- </div> -->
 
-  {% unless page.categories == empty %}
+<!--   {% unless page.categories == empty %}
     <dl class="tag_box inline">
-      <!-- <li><i class="icon-folder-open"></i></li> -->
+      <li><i class="icon-folder-open"></i></li>
       {% assign categories_list = page.categories %}
       
       {% comment %}
@@ -43,7 +44,7 @@
       {% assign tags_list = page.tags %}
       {% include JB/tags_list %}
     </dl>
-  {% endunless %}  
+  {% endunless %}  --> 
 
 
     <!-- <hr> -->
@@ -64,7 +65,7 @@
       {% endif %}
 
       <!-- <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li> -->
-      <li><a href="/posts.html">All Posts</a></li>
+      <li><a href="/aktuelles.html">Aktuelles</a></li>
     </ul>
   </div>
     <!-- <hr> -->

@@ -1,16 +1,12 @@
 ---
 layout: page
-title : About
-header : Post Archive
-group: navigation
-category: About
+title : Wo
+header : Wo
+category: Wiener Modell
 ---
-
-
 
 <div class="page-header">
   <h3>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h3>
 </div>
 
-
-<p> about.html </p>
+Text - wo xxxxxxxxxxxx
