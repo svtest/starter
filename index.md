@@ -1,13 +1,17 @@
 ---
 layout: page
 title: Index
+published: true
 ---
+
 {% comment %}
 tagline: Supporting tagline
 {% endcomment %}
 
 
 {% include JB/setup %}
+
+![Screen Shot 2015-12-01 at 09.05.20.png]({{site.baseurl}}/_posts/Screen Shot 2015-12-01 at 09.05.20.png)
 
 
 <h4><p> Text - xxxxxxxxxxxxxxxx + Graphik (Rolfsches Modell) </p></h4>
@@ -21,5 +25,3 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 <br />
 
 ![image]({{ site.url }}/images/seesaw.jpg)
-
-
