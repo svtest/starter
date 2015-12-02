@@ -11,6 +11,8 @@ JB:
 
 Huhu
 
+![Screen Shot 2015-12-01 at 09.05.20.png]({{site.baseurl}}/_posts/Screen Shot 2015-12-01 at 09.05.20.png)
+
 <p><h5> Spruch des Monats September</h5><br />
 
 Die 10 wichtigsten Job-Tipps für die Wirtschaftskrise im Überblick:<br />
@@ -18,6 +20,7 @@ Die 10 wichtigsten Job-Tipps für die Wirtschaftskrise im Überblick:<br />
 Langfristig denken<br />
 
 Die Krise als Chance<br />
+
 
 Das Boot prüfen<br />
 
